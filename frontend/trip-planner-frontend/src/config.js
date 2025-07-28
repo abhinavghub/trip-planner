@@ -4,10 +4,10 @@ const config = {
     backendUrl: 'http://localhost:8000'
   },
   production: {
-    // You'll need to deploy your backend to a service like Railway, Render, or Heroku
-    backendUrl: 'https://your-backend-url.railway.app' // Replace with your actual backend URL
+    // This will be updated with your Railway backend URL
+    backendUrl: process.env.REACT_APP_BACKEND_URL || 'https://your-backend-url.railway.app'
   }
 };
 
-// Use development config for now
+// Use development config for now, will be overridden in production
 export const backendUrl = config.development.backendUrl; 
